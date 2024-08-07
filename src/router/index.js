@@ -2,7 +2,8 @@
 // import 하는 요소가 여러개 있을 때도 {}를 붙인다
 import { createRouter, createWebHistory } from "vue-router"
 import {practiceRouter} from '@/router/practiceRouter';
-
+import {memberRouter} from '@/router/memberRouter';
+import {productRouter} from '@/router/productRouter'
 // @는 src(루트 폴더 경로)를 의미
 // import HomeComponent from "@/components/HomeComponent.vue";
 // import TestComponent from "@/components/TestComponent.vue";
@@ -10,15 +11,19 @@ const routes=[
     // {
     //     // path로도 라우팅이 가능하고, name으로도 라우팅이 가능
     //     // name으로 라우팅한느 경우는 js코드내에서 라우팅하는 경우
-    //     path:'/home',
-    //     name:'HOME',
+    //     path:'/',
+    //     name:'HomeComponent',
     //     component: HomeComponent
-    // },{
+    // },
+    // {
     //     path:'/test',
     //     name:'TEST',
     //     component:TestComponent
     // }
-    ...practiceRouter
+    ...practiceRouter,
+    ...memberRouter,
+    ...productRouter
+    
 ]
 const router = createRouter({
     // vue router는 내부적으로 두가지 방식의 히스토리 관리를 제공

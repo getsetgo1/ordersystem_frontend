@@ -39,6 +39,9 @@
                 return this.count*2;
             }
         },
+        created(){
+            alert("created함수 호출");
+        },
         methods:{
             showValue(){
                 alert(this.value2);
