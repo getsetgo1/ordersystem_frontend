@@ -7,6 +7,7 @@
     <v-main>
       <router-view/>
     </v-main>
+    <FooterComponent/>
   </v-app>
   <!-- <FooterComponent/> -->
 </template>
@@ -17,12 +18,13 @@
 // import HelloWorld from './components/HelloWorld.vue';
 import HeaderComponent from '@/components/HeaderComponent.vue'
 // import FooterComponent from './components/FooterComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 export default {
   name: 'App',
   components: {
     // HelloWorld
     HeaderComponent,
-    // FooterComponent
+    FooterComponent
   }
 }
 </script>

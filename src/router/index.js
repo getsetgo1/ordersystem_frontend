@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import {practiceRouter} from '@/router/practiceRouter';
 import {memberRouter} from '@/router/memberRouter';
 import {productRouter} from '@/router/productRouter'
+import {orderRoutes} from '@/router/orderRouter'
 // @는 src(루트 폴더 경로)를 의미
 // import HomeComponent from "@/components/HomeComponent.vue";
 // import TestComponent from "@/components/TestComponent.vue";
@@ -22,7 +23,8 @@ const routes=[
     // }
     ...practiceRouter,
     ...memberRouter,
-    ...productRouter
+    ...productRouter,
+    ...orderRoutes,
     
 ]
 const router = createRouter({

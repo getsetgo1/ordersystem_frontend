@@ -22,7 +22,7 @@
                 prepend-icon="mdi-lock"
               >
               </v-text-field>
-              <v-row>
+              <v-row >
                 <v-col cols="6"
                   ><v-btn type="submit" color="primary" block
                     >로그인</v-btn
@@ -81,8 +81,10 @@ export default {
         localStorage.setItem('refreshToken',refreshToken);
         localStorage.setItem('role',role)
         // 홈페이지 콘솔창에서 Application>Local storage 에 저장되는 거 확인
-
+        
         // this.$router.push("/"); // 이렇게 하면 header는 안 바뀜
+
+
         window.location.href='/';
 
     } catch (e) {

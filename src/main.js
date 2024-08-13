@@ -8,7 +8,7 @@ import router from "@/router/index.js";
 import vuetify from "./plugins/vuetify";
 import "@mdi/font/css/materialdesignicons.css"; // ⭐️
 import axios from "axios";
-
+import store from './store/index.js' // ⭐️ 전역 상태 관리: 폴더 자체를 임포트
 // App.vue 파일을 빌드해서 웹 브라우저에 올려놓겠다는 의미이다.
 // createApp(App).mount('#app')
 const app = createApp(App);
@@ -56,7 +56,7 @@ axios.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
+app.use(store);
 app.use(router);
 app.use(vuetify); // ⭐️
 app.mount("#app");
